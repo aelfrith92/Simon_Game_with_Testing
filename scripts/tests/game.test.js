@@ -2,7 +2,7 @@
 * @jest-environment jsdom
 */
 // importa un oggetto stavolta, non un intero documento
-const { game, newGame } = require("../game"); 
+const { game, newGame, showScore, addturn } = require("../game"); 
 
 beforeAll(() => {
 	let fs = require("fs");
@@ -37,6 +37,7 @@ describe("newGame works correctly", () => {
 		game.score = 42;
 		game.playerMoves = ["button1", "button3"];
 		game.currentGame = ["button2", "button3"];
+		document.getElementById("score").innerText = '42';
 		newGame();
 	});
 	test("should set game score to zero", () => {
@@ -45,7 +46,10 @@ describe("newGame works correctly", () => {
 	test("should set playerMoves to empty array", () => {
 		expect(game.playerMoves.length).toBe(0);
 	});
-	test("should set currentGame to empty array", () => {
-		expect(game.currentGame.length).toBe(0);
+	test("should add one move to the computer's game array", () => {
+		expect(game.currentGame.length).toBe(1);
+	});
+	test("should display 0 for the element with id of score", () => {
+		expect(document.getElementById("score").innerText).toEqual(0);
 	});
 });
