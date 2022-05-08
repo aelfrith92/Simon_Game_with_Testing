@@ -1,0 +1,23 @@
+{
+  "name": "simongamewithtesting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aelfrith92/Simon_Game_with_Testing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aelfrith92/Simon_Game_with_Testing/issues"
+  },
+  "homepage": "https://github.com/aelfrith92/Simon_Game_with_Testing#readme"
+}
